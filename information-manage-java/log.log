@@ -1,0 +1,13 @@
+2026-02-14 18:14:04.684 [main] INFO  org.example.TliasWebApplication - Starting TliasWebApplication using Java 17.0.12 with PID 26888 (C:\Users\21030\Desktop\tlias\tlias-web\target\classes started by 21030 in C:\Users\21030\Desktop\tlias)
+2026-02-14 18:14:04.684 [main] INFO  org.example.TliasWebApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 18:14:05.344 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-14 18:14:05.353 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-14 18:14:05.354 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-14 18:14:05.355 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14 18:14:05.391 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-14 18:14:05.391 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 682 ms
+2026-02-14 18:14:05.758 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-14 18:14:05.770 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-14 18:14:05.777 [main] INFO  org.example.TliasWebApplication - Started TliasWebApplication in 1.432 seconds (process running for 1.95)
+2026-02-14 18:15:37.108 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 18:15:37.288 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete

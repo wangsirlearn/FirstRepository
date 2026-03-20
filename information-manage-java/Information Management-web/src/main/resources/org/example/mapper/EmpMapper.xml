@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.EmpMapper">
+    <delete id="remove">
+        delete from emp where id in
+        <foreach item="id" collection="ids" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+    <!--    <insert id="saveUser">-->
+<!--        insert into emp(username,name,gender,image,dept_id,entry_date,job,salary,phone)-->
+<!--        values(#{username},#{name},#{gender},#{image},#{deptId},#{entryDate},#{job},#{salary},#{phone})-->
+<!--    </insert>-->
+
+
+
+    <select id="findSplitSpecial" resultType="org.example.popj.Emp">
+        --                 动态sql：随着外部条件的动态变化而变化的语句 if test="条件" 标签会拼接sql
+        --                 where标签会生成where sql关键字，自动去除多余的and和or
+        select e.*, d.name deptName from emp as e left join dept as d on e.dept_id = d.id
+            <where>
+
+
+                <if test="name != null and name != ''">
+                    e.name like '%${name}%'
+                </if>
+                <if test="gender != null">
+                    and e.gender = #{gender}
+                </if>
+                <if test="begin != null and end != null">
+                    and e.entry_date between #{begin} and #{end}
+                </if>
+            </where>
+            order by e.update_time desc
+    </select>
+</mapper>

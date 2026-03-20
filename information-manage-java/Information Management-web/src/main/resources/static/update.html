@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+<body>
+<div>
+    <form action="/up" method="post" enctype="multipart/form-data">
+<!--        必须要有enctype属性 不然上传的是文件名-->
+        <label for="name">名字</label>
+        <input type="text" name="name" ID="name">
+        <label>文件名</label>
+        <input type="file" name="file">
+        <button type="submit">上传</button>
+    </form>
+</div>
+
+</body>
+</html>
